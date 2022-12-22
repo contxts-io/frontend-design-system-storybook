@@ -55,7 +55,7 @@ const MainButtonStyle = styled.button`
   overflow: hidden;
   cursor: pointer;
   transition: all ease-out 0.3s;
-  color: #fff;
+  color: ${(props) => props.theme.colors['ui-background']};
   background-color: ${(props) =>
     props.backgroundColor && props.backgroundColor};
 
@@ -75,13 +75,13 @@ const MainButtonStyle = styled.button`
     props.variant &&
     (props.variant === 'primary'
       ? css`
-          color: #fff;
-          background-color: #3b43ff;
+          color: ${(props) => props.theme.colors['ui-background']};
+          background-color: ${(props) => props.theme.colors.primary};
         `
       : props.variant === 'secondary'
       ? css`
-          color: #fff;
-          background-color: #232429;
+          color: ${(props) => props.theme.colors['ui-background']};
+          background-color: ${(props) => props.theme.colors['ui-up-08']};
         `
       : props.variant === 'tertiary' &&
         css`
@@ -91,7 +91,7 @@ const MainButtonStyle = styled.button`
           &:hover,
           &:active {
             opacity: 1;
-            border-color: #3b43ff;
+            border-color: ${(props) => props.theme.colors.primary};
           }
         `)}
 `;
