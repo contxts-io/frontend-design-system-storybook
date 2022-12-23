@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors['text-01']};
     overflow: unset;
   }
+  
+  #docs-root > div {
+    background-color: ${(props) => props.theme.colors['ui-background']};
+  }
 
   table,
   thead,
